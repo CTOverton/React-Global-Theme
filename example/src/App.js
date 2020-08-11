@@ -1,24 +1,3 @@
-# react-global-theme
-
-> A React library for creating a global theme
-
-[![NPM](https://img.shields.io/npm/v/react-global-theme.svg)](https://www.npmjs.com/package/react-global-theme) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-
-## Install
-
-#### Yarn
-```bash
-yarn add react-global-theme
-```
-
-#### npm
-```bash
-npm install --save react-global-theme
-```
-
-## Usage
-
-```jsx
 import React from 'react'
 
 import { createTheme, ThemeProvider, useTheme } from 'react-global-theme'
@@ -75,9 +54,3 @@ const useStyles = theme => ({
 })
 
 export default App
-
-```
-
-## License
-
-MIT © [CTOverton](https://github.com/CTOverton)
