@@ -1,13 +1,13 @@
 # Global Theme Implementation Guide
-This guide is meant to get you using the global theme logic in your project as fast as possible, as well as explaining some of the more advanced details and best practices.
+Use the global theme logic in your project as fast as possible. And get familiar with more advanced details and best practices.
 
 ## Quick start
 
 ### Install
 
-> Todo: Add as npm package for quick and easy install
+> Note: Add as an npm package for quick and easy install.
 
-To install the library to your project copy the contents of the src directory into your own project
+1. Install the library to your project. Copy the contents of the **src directory** into your own project.
 
 ```
 |-- Project Root
@@ -80,12 +80,12 @@ export default App
 ```
 
 ## Specifics
-So if you setup your project with the quick start you should be good to go with the basic use of the theme. Now let's talk about what is what and how we can use this in our entire project.
+Use the quick start steps and you are good to go with the basic use of the theme. Now let's talk about what is what and how we can use this in your entire project.
 
 ### Theme Provider
-In order to use the theme to begin with we have to provide it to our components.
+In order to use the theme provide it to the components.
 
-We do this by wrapping the root of our application with the `ThemeProvider` component.
+1. Wrap the root of your application with the `ThemeProvider` component.
 
 ```jsx
 import React from 'react'
@@ -105,9 +105,9 @@ export default App
 ```
 
 ### Using the default theme
-Theme provider uses React's Context and hooks to pass the theme object to any component it wraps without having to pass properties down from child to child.
+Theme provider uses the React Context and hooks to pass the theme object to any component.  It wraps without having to pass properties down.
 
-To access the theme object we use the provided `useTheme()` hook.
+1. To access the theme object, use the`useTheme()` hook.
 
 ```jsx
 import React from 'react'
@@ -127,9 +127,9 @@ export default ChildComponent
 ```
 
 ### Customizing the theme
-The current default theme is an object, and this object can be overridden to change any of the default values.
+The current default theme is an object. Override this object to change any of the default values.
 
-We can also add any additional values we want to use throughout our application.
+Also,  add any additional values for use throughout your application.
 
 ```jsx
 import React from 'react'
@@ -165,10 +165,10 @@ export default App
 
 ```
 
-> A good way to find out what the default theme has to offer is to `console.log(useTheme())` to see the full theme object and all predefined values
+> A good way to find out what the default theme has to offer is to use `console.log(useTheme())` and view the full theme object and all predefined values.
 
 ### Nested Themes
-We can nest themes to give different parts of our applications different looks while maintaining consistency throughout all our components.
+Nest themes to give different parts of the applications a different look while maintaining consistency throughout all components.
 
 ```jsx
 import React from 'react'
