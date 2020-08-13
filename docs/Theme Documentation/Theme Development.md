@@ -11,7 +11,7 @@ The method behind this implementation of global theming madness is that the them
 
 Use [React Context](https://reactjs.org/docs/context.html) to achieve this.
 
-Specify your theme as a context to reference it throughout the Journey app with React Hooks.
+Specify your theme as a context to reference it throughout the app with React Hooks.
 
 Here, a context is made out of the default theme object.
 
@@ -37,7 +37,7 @@ Context is a lot like scopes in programming, and maybe even more like context in
 
 ![Context Meme](https://i.pinimg.com/originals/3a/29/ca/3a29ca58edc699ba4482a1c9645c7887.jpg)
 
-This is where the Journey context provider comes into play.  So, consider the Journey application as the conversation, then you provide it with the context of your theme.
+This is where the context provider comes into play.  So, consider the application as the conversation, then you provide it with the context of your theme.
 
 #### ThemeProvider
 ```jsx
@@ -103,7 +103,7 @@ export default ChildComponent
 Now that you can use context to access a theme object anywhere in your application, here are other features this specific library provides relevant to the theming process.
 
 #### Overriding the default theme
-The reason the theme is provided with this library is so that a set theme to start your customer off with exits.  They can use it right off the bat without a the concern of customization. It is very useful to have the same library implemented on multiple projects, and not project by painstaking project. 
+The reason the default theme is provided with this library is so that a structure exsists to build off of.  Use it right off the bat without a the concern of customization. It is very useful to have the same library implemented on multiple projects, and not reimplemented the same logic on a project by painstaking project basis. 
 
 > See the Implementation guide for details.
 
