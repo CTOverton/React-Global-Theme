@@ -1,19 +1,19 @@
 # Theme Development Guide
-This section is dedicated to setting up your own custom theme logic from the ground up.
+Set up your custom theme logic from the ground up.
 
-> If you want to use the pre-existing code in your own project, just follow the Theme Implementation guide instead.
+>To use pre-existing code in your own project, follow the Theme Implementation guide instead.
 
 ## First things first
-A good place to start before developing this method yourself is to understand how this works and what we are trying to do, I reccomend reviewing the implementation guide to see what each component we will be making will be used for.
+Before developing this method yourself understand how it works. Check out the Implementation guide to understand what each component you make will be used for.
 
 ## Creating the context
-The whole method behind this implementation of global theming is that the theme at it's core is nothing more than an `object` that can be accessed from any component in your application.
+The method behind this implementation of global theming madness is that the theme is nothing more than an `object`. Nifty, right? It can be accessed from any component in your application.
 
-The way we can achieve this is by using [React Context](https://reactjs.org/docs/context.html).
+Use [React Context](https://reactjs.org/docs/context.html) to achieve this.
 
-By specifying our theme as a context we can reference it throughout our app via React Hooks.
+Specify your theme as a context to reference it throughout the Journey app with React Hooks.
 
-For our purpose we can make a context out of the default theme object.
+Here, a context is made out of the default theme object.
 
 #### ThemeContext
 ```jsx
@@ -33,11 +33,11 @@ export default React.createContext(defaultTheme);
 ```
 
 ## Using the context
-Context is a lot like scopes in programming, and maybe even more like context in spoken language. The purpose is when you reference something you have a context to provide relevant meaning.
+Context is a lot like scopes in programming, and maybe even more like context in spoken language. The ideas is that when you reference something there is context, or a backdrop, to provide relevant meaning.
 
 ![Context Meme](https://i.pinimg.com/originals/3a/29/ca/3a29ca58edc699ba4482a1c9645c7887.jpg)
 
-And this is where our context provider comes into play. So if we think about our application as the conversation, we need to provide it with the context of our theme.
+This is where the Journey context provider comes into play.  So, consider the Journey application as the conversation, then you provide it with the context of your theme.
 
 #### ThemeProvider
 ```jsx
@@ -49,7 +49,7 @@ export default ({children}) => <ThemeContext.Provider value={{...defaultTheme}}>
 ```
 
 #### Implementation
-By wrapping the root of our application with the provider we are successfully giving context of our theme to any components within it, and any components further and further down the tree.
+By wrapping the root of the application with the provider, you give context of the theme to any components within it, and any components down the tree.
 ```jsx
 import React from 'react'
 
@@ -68,7 +68,7 @@ export default App
 ```
 
 ## Accessing the theme
-Now that we have the context for the theme and we know what we are talking about, we need a way to access it from any component within the scope of that context. We do this by creating a hook into the context.
+Now that the context for the theme is established and the conversation is started, create access to it from any component within the scope of that context.  Do this by creating a hook into the context.
 
 #### useTheme
 ```jsx
@@ -98,17 +98,17 @@ export default ChildComponent
 
 ```
 
-## What else?
+### What else?
 
-In this process we showed how you can use context to access a theme object anywhere in your application, but there are other features this specific library provides relevant to the theming process.
+Now that you can use context to access a theme object anywhere in your application, here are other features this specific library provides relevant to the theming process.
 
-### Overriding the default theme
-This isn't incredibly useful if you are implementing this theme logic on a project per project basis. The reason it is provided with this library however is so that we can have a set theme to start users off with they can use immediately without having to customize anything. This is very useful for the same library being implemented on multiple projects.
+#### Overriding the default theme
+The reason the theme is provided with this library is so that a set theme to start your customer off with exits.  They can use it right off the bat without a the concern of customization. It is very useful to have the same library implemented on multiple projects, and not project by painstaking project. 
 
-> See implementation guide for details
+> See the Implementation guide for details.
 
-### Nested Themes
-Along with overriding the default theme, just like in conversations you can create multiple contexts, and with this we can nest themes to give different parts of our applications different looks while maintaining consistency throughout all our components.
+#### Nested themes
+Along with overriding the default theme, just like in conversations, you can create multiple contexts.  Here you can nest themes to give different parts of our applications different looks while maintaining consistency throughout all your components.
 
 ```jsx
 import React from 'react'
@@ -156,10 +156,8 @@ export default App
 
 ```
 
-### Deep Merge
-A very useful utility to not only merge objects at the shallow first set of children, but can traverse two object trees and merge them at every level.
+#### Deep merge
+Override themes and apply custom values to not only merge objects at the shallow first set of children, but also across two object trees.  Merge them at every level. 
 
-This is very useful when overriding themes and applying custom values.
-
-### Colors
-Though not currently implemented, there is a method to the madness in how this project structure is setup for the elementes provided in the default theme. One of which being the colors. One day the goal is to use the main color provided for colors to generate a relavant light and dark version. That way creating a dark mode of light mode app will be very simple.
+#### Colors
+Though not currently implemented, there is plan to the project structure as to how elementes are provided in the default theme. The goal is to use the main color provided for colors to generate a relavant light and dark version. This way creating a dark or light mode app is very simple.
