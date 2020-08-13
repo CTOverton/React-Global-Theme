@@ -33,7 +33,7 @@ export default React.createContext(defaultTheme);
 ```
 
 ## Using the context
-Context is a lot like scopes in programming, and maybe even more like context in spoken language. The ideas is that when you reference something there is context, or a backdrop, to provide relevant meaning.
+Context is a lot like scopes in programming, and maybe even more like context in spoken language. The idea is that when you reference something there is context, or a backdrop, to provide relevant meaning.
 
 ![Context Meme](https://i.pinimg.com/originals/3a/29/ca/3a29ca58edc699ba4482a1c9645c7887.jpg)
 
@@ -68,7 +68,7 @@ export default App
 ```
 
 ## Accessing the theme
-Now that the context for the theme is established and the conversation is started, create access to it from any component within the scope of that context.  Do this by creating a hook into the context.
+Now that the context for the theme is established and the conversation started, create access to it from any component within the scope of that context.  Do this by creating a hook into the context.
 
 #### useTheme
 ```jsx
@@ -103,7 +103,7 @@ export default ChildComponent
 Now that you can use context to access a theme object anywhere in your application, here are other features this specific library provides relevant to the theming process.
 
 #### Overriding the default theme
-The reason the default theme is provided with this library is so that a structure exsists to build off of.  Use it right off the bat without a the concern of customization. It is very useful to have the same library implemented on multiple projects, and not reimplemented the same logic on a project by painstaking project basis. 
+The reason the default theme is provided with this library is so that a structure exists to build off of.  Use it right off the bat without the concern of customization. It is very useful to have the same library implemented on multiple projects, and not reimplemented the same logic on a project by painstaking project basis.
 
 > See the Implementation guide for details.
 
@@ -157,7 +157,7 @@ export default App
 ```
 
 #### Deep merge
-Override themes and apply custom values to not only merge objects at the shallow first set of children, but also across two object trees.  Merge them at every level. 
+Override themes and apply custom values to not only merge objects at the shallow first set of children, but also across two object trees.  Merge them at every level.
 
 #### Colors
-Though not currently implemented, there is plan to the project structure as to how elementes are provided in the default theme. The goal is to use the main color provided for colors to generate a relavant light and dark version. This way creating a dark or light mode app is very simple.
+Though not currently implemented, there is a plan to the project structure as to how elements are provided in the default theme. The goal is to use the main color provided for colors to generate a relevant light and dark version. This way creating a dark or light mode app is very simple.

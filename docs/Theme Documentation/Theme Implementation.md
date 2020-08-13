@@ -105,7 +105,7 @@ export default App
 ```
 
 ### Using the default theme
-Theme provider uses the React Context and hooks to pass the theme object to any component.  It wraps without having to pass properties down.
+Theme provider uses the React Context and hooks to pass the theme object to any component. It wraps without having to pass properties down.
 
 1. To access the theme object, use the`useTheme()` hook.
 
@@ -129,7 +129,7 @@ export default ChildComponent
 ### Customizing the theme
 The current default theme is an object. Override this object to change any of the default values.
 
-Also,  add any additional values for use throughout your application.
+Also, add any additional values for use throughout your application.
 
 ```jsx
 import React from 'react'

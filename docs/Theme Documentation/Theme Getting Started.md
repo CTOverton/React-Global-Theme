@@ -1,5 +1,5 @@
 # Global Theming Guide
-Creat a consistent theme across your mobile app, website, or brand. You're thank us later. 
+Creat a consistent theme across your mobile app, website, or brand. You'll thank us later.
 
 This guide makes development and implementation of a global theme in any React application as seamless as possible.
 
